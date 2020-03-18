@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <h1>Page from Index</h1>
+    <b-notification :active.sync="isActive" aria-close-label="Close notification">
+            Testing notification
+    </b-notification>
   </div>
 </template>
 
@@ -8,16 +10,13 @@
 
 export default {
   name: 'app',
+  data() {
+    return {
+      isActive: true,
+    }
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
